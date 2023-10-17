@@ -1,0 +1,58 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block 'title' %}
+        View Users
+        {% endblock %}
+    </title>
+</head>
+<body>
+
+<br>
+
+<br><br>
+
+<h2 align="center"><u>View Registered Users</u></h2>
+
+Total Registered Users = {{count}}  <br>
+
+<table align="center" border="2">
+    <tr style="font-weight:bold">
+        <td>ID</td>
+        <td>Full Name</td>
+        <td>Gender</td>
+        <td>Date of Birth</td>
+        <td>EMAIL ID</td>
+        <td>Username</td>
+        <td>Loction</td>
+        <td>Contact No</td>
+        <td>Registration Time</td>
+        <td>Action</td>
+    </tr>
+
+    {% for user in users %}
+    <tr>
+        <td>{{user.id}}</td>
+        <td>{{user.fullname}}</td>
+        <td>{{user.gender}}</td>
+        <td>{{user.dateofbirth}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.username}}</td>
+        <td>{{user.location}}</td>
+        <td>{{user.contact}}</td>
+        <td>{{user.registrationtime}}</td>
+        <td>
+
+            <a href="/deleteuser/{{user.id}}">Delete</a>
+
+        </td>
+
+    </tr>
+    {% endfor %}
+
+</table>
+
+
+</body>
+</html>

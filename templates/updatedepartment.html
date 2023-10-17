@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block 'title' %}
+        Update
+        {% endblock %}
+    </title>
+</head>
+<body>
+
+<h3 align="center">Django with Form Handling, MVT, Template Inheritance, Session, Cookies, Email, ModelForms</h3>
+<hr color="black"><hr color="black">
+<br>
+
+
+
+
+<br><br>
+
+
+<h3 align="center"><u>Update Department</u></h3>
+
+
+<h3 align="center"><mark>{{msg}}</mark></h3>
+
+<form method="post">
+{% csrf_token %}
+<table align="center">
+
+    {% for field in deptform %}
+
+    <tr>
+        <td>{{field.label}}</td>
+        <td>{{field}}</td>
+    </tr>
+
+    {% endfor %}
+
+        <tr align="center">
+        <td colspan="2"><input type="submit" value="Update" class="button"></td>
+    </tr>
+
+</table>
+
+</form>
+
+
+</body>
+</html>

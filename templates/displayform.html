@@ -1,0 +1,33 @@
+{% extends 'index.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block 'title' %}
+        Display
+        {% endblock %}
+    </title>
+</head>
+<body>
+
+<h3 align="center">Django with Form Handling, MVT, Template Inheritance, Session, Cookies, Email, ModelForms</h3>
+<hr color="black"><hr color="black">
+<br>
+
+
+<br><br>
+
+{% block 'body' %}
+
+<b>ID</b>{{id}}<br>
+<b>Name</b>{{name}}<br>
+<b>Gender</b>{{gender}}<br>
+<b>Date of Birth</b>{{dateofbirth}}<br>
+<b>Department</b>{{department}}<br>
+<b>Email Address</b>{{emailid}}<br>
+<b>Mobile No</b>{{contactno}}<br>
+
+{% endblock %}
+
+</body>
+</html>

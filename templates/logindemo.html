@@ -1,0 +1,57 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block 'title' %}
+        Login Demo
+        {% endblock %}
+    </title>
+</head>
+<body>
+
+<h3 align="center">Django with Form Handling, MVT, Template Inheritance, Session, Cookies, Email, ModelForms</h3>
+<hr color="black"><hr color="black">
+<br>
+
+
+
+<br><br>
+
+
+<h3 align="center"><u>Login Demo</u></h3><br>
+
+<form method="post" action="{% url 'checklogindemo' %}">
+{% csrf_token %}
+<table align=center>
+
+<tr>
+<td><label>Email ID</label></td>
+<td><input type="email" name="emailid" required="required"/></td>
+</tr>
+
+<tr><td></td></tr>
+
+<tr>
+<td><label>Password</label></td>
+<td><input type="password" name="password" required="required"/></td>
+</tr>
+
+<tr><td></td></tr>
+
+
+<tr><td></td></tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
+
+<tr align=center>
+<td colspan=2><input type="submit" value="Login" class="button"></td>
+</tr>
+
+</table>
+
+</form>
+
+
+</body>
+</html>
